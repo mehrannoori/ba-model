@@ -6,7 +6,7 @@ using namespace std;
 
 
 const 
-int  N  =  10;  // number of nodes
+int  N  =1000;  // number of nodes
 int  m0 =    2;  // number of initial nodes
 int  m  =    2;  // number of links of each new node
 int  T  = N-m0;  // time steps
