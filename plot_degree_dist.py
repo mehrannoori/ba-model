@@ -92,7 +92,7 @@ def count_zeros():
 
 
 def main():
-    readData('adj1000.txt')
+    readData('adj20000.txt')
     plot_degree_dist(G)
     count_zeros()
 

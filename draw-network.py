@@ -24,5 +24,5 @@ def draw():
     nx.draw(Graph, node_size=10)
     plt.show()
 
-readData('adj1000.txt')
+readData('adj100.txt')
 draw()

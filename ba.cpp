@@ -6,7 +6,7 @@ using namespace std;
 
 
 const 
-int  N  =1000;  // number of nodes
+int  N  =20000;  // number of nodes
 int  m0 =    2;  // number of initial nodes
 int  m  =    2;  // number of links of each new node
 int  T  = N-m0;  // time steps
@@ -54,25 +54,25 @@ void make_adjmtrx(void){
 
     for(int t=0; t<T; t++){
 
-        cout << "\nstep: " << t << endl;
+        //cout << "\nstep: " << t << endl;
         
         K_sum();
         int new_node = m0 + t;
-        cout << "new node: " << new_node << endl;
+        //cout << "new node: " << new_node << endl;
         int edge = 0;
         
         while(edge != m){
             int indx = rand()%(m0+t);
-            cout << "target node: " << indx << endl;
+            //cout << "target node: " << indx << endl;
             if(A[new_node][indx] == 0){
                 double random = (float)rand()/RAND_MAX;
-                cout << "random number: " << random << endl;
+                //cout << "random number: " << random << endl;
                 double p_i = P_i(indx);
-                cout << "P(i)=" << p_i << endl;
+                //cout << "P(i)=" << p_i << endl;
                 if(random < p_i){
                     A[new_node][indx] = 1;
                     A[indx][new_node] = 1;
-                    cout << "----node " << new_node << " connected to " << indx << endl;
+                    //cout << "----node " << new_node << " connected to " << indx << endl;
                     edge++;
                 }
             }
